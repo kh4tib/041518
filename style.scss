@@ -1,0 +1,87 @@
+// Global Styles
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+// Main Styles
+
+.main {
+    width: 100%;
+    height: 100%;
+    background: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            div {
+            background: aquamarine;
+            }
+        }
+    }
+}
+
+.rectangle{
+    &__one{
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background: #fff;
+        top: 0;
+        transition: 300ms ease-in-out;        
+        
+        &--js {
+            position: absolute;
+            transform: rotate(45deg);
+            top: 8px;
+            left: 0;
+            }
+    }
+    &__two {
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background: #fff;
+        align-self: center;
+        left: 0;
+        transition:300ms ease-in-out;
+
+        &--js {
+            left: -18px;
+        }
+    }
+
+    &__three {
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background: #fff;
+        bottom: 0;
+        transition: 300ms ease-in-out;
+
+        &--js {
+        position: absolute;
+        transform: rotate(-45deg);
+        bottom: 8px;
+        left: 0;
+        }
+    }
+}
